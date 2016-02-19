@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>2D Bouncing Game</title>
+        
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            canvas {
+                background: #eee;
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <canvas id="myCanvas" width="480" height="320">
+            
+        </canvas>
+        
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+        //-----------Square    
+            ctx.beginPath();
+            ctx.rect(20, 40, 50 ,50);       // (margin-left, margin-top, width, height)
+            ctx.fillStyle = '#ff0000';      // red
+            ctx.fill();
+            ctx.closePath();
+        //----------Rectangle
+            ctx.beginPath();
+            ctx.rect(80, 40, 100, 50);
+            ctx.strokeWidth = '#ff0000';
+            ctx.fill();
+            ctx.closePath();
+        //----------Circle
+            ctx.beginPath();
+            ctx.arc(240, 160, 30, 0, Math.PI*2, false);     // (x-cord, y-cord, radius, start angle, end angle, rotation false = clockwise)
+            ctx.fillStyle = 'green';
+            ctx.fill();
+            ctx.closePath();
+            
+        </script>
+    </body>
+</html>
